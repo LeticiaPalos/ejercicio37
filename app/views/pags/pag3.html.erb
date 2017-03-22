@@ -1,0 +1,21 @@
+<p>Pag3</p>
+
+<table class="table">
+  <% @users.each do |u| %>
+    <tr>
+      <td><%= u %></td>
+    </tr>
+  <% end %>
+</table>
+
+<script type="text/javascript">
+  var count = 0;
+  $("body").click(function(e) {
+    count++;
+    if(count===2){
+      e.preventDefault();
+      $.backstretch('http://dl.dropbox.com/u/515046/www/outside.jpg');
+      count = 0;
+    }
+  });
+</script>
